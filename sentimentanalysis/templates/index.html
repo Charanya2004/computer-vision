@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Tool</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e9ecef;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .description {
+            color: #6c757d;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 15px;
+            font-size: 1.2em;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Sentiment Analysis Tool</h1>
+        <p class="description text-center">NOTE: To get the class name, go to the site you want to implement sentiment analysis on and right click to select the 'Inspect' option. Then check for the class name for the comment section and paste it in .*class_name.* format</p>
+        <form action="/analyze" method="post">
+            <div class="form-group">
+                <label for="url">Enter the URL:</label>
+                <input type="text" class="form-control" id="url" name="url" placeholder="Enter URL" required>
+            </div>
+            <div class="form-group">
+                <label for="class_name">Enter the Class Name:</label>
+                <input type="text" class="form-control" id="class_name" name="class_name" placeholder="Enter Class Name" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Analyze Sentiment</button>
+        </form>
+    </div>
+</body>
+</html>
+
